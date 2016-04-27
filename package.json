@@ -1,0 +1,19 @@
+{
+  "name": "node-torrent",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "jsdoc": "jsdoc src"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jsdoc": "^3.4.0"
+  },
+  "dependencies": {
+    "bencode": "^0.9.0",
+    "bignum": "^0.11.0"
+  }
+}

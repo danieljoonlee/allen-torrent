@@ -1,0 +1,5 @@
+.idea
+node_modules
+out
+npm-debog.log
+*.torrent
