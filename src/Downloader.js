@@ -21,7 +21,7 @@ module.exports = class Downloader {
     //    const conn = new PeerConn(peer, this);
     //  });
     //});
-    new PeerConn({ host: '177.100.139.125', port: 23012 }, this);
+    new PeerConn({ host: '96.32.63.77', port: 49008 }, this);
   }
 
   buildHandshake() {
@@ -64,7 +64,7 @@ class PeerConn {
   }
 
   responder(msg) {
-    console.log(msg)
+    console.log('msg', msg)
     const msgLen = msg.readInt32BE(0);
     const msgId = msgLen > 0 ? msg.readInt8(4) : null;
     const payload = msgLen > 0 ? msg.slice(5) : null;
@@ -88,7 +88,7 @@ class PeerConn {
         }
       }
     }
-    console.log(this.downloader.peerHaves[this.peer.host]);
+    console.log('peerHaves: ', this.downloader.peerHaves[this.peer.host]);
   }
 
   addPeerHave(pieceIndex) {

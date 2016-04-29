@@ -11,3 +11,13 @@ module.exports.chunk = (iterable, chunkSize) => {
 module.exports.randInt32 = () => {
   return Math.floor(Math.random() * Math.pow(2, 32));
 };
+
+module.exports.delayFunc = (callback, time) => {
+  let timer;
+
+  return () => {
+    clearTimeout(timer);
+    timer = setTimeout( () => { callback(); }, time);
+  }
+
+}
